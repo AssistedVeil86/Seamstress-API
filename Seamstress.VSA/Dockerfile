@@ -26,4 +26,4 @@ RUN dotnet publish "./Seamstress.VSA.csproj" -c $BUILD_CONFIGURATION -o /app/pub
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Seamtress.VSA.dll"]
+ENTRYPOINT ["dotnet", "Seamstress.VSA.dll"]
