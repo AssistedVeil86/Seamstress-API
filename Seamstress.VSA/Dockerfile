@@ -12,7 +12,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Seamstress.VSA/Seamstress.VSA.csproj", "Seamstress.VSA/"]
-RUN dotnet restore "./Seamstress.VSA/Seamtress.VSA.csproj"
+RUN dotnet restore "./Seamstress.VSA/Seamstress.VSA.csproj"
 COPY . .
 WORKDIR "/src/Seamstress.VSA"
 RUN dotnet build "./Seamstress.VSA.csproj" -c $BUILD_CONFIGURATION -o /app/build
