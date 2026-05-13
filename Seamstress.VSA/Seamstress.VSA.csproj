@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>716743a2-c4e5-4e60-a01d-92248979ed44</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="2.0.1" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="Hangfire" Version="1.8.23" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.23" />
+    <PackageReference Include="Hangfire.PostgreSql" Version="1.21.1+1" />
+    <PackageReference Include="MailKit" Version="4.16.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="4.8.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
+    <PackageReference Include="QuestPDF" Version="2026.2.4" />
+    <PackageReference Include="Resend" Version="0.5.0" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.14.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain/Enums/" />
+    <Folder Include="Domain/Errors/" />
+    <Folder Include="Features/Expenses/" />
+    <Folder Include="Features/Expenses/CreateExpense/" />
+    <Folder Include="Features/Expenses/GetExpenses/" />
+    <Folder Include="Features/Expenses/Shared/" />
+    <Folder Include="Features/Expenses/UpdateExpense/" />
+    <Folder Include="Features/Expenses/UpdateTotal/" />
+    <Folder Include="Features/Orders/CreateOrder/" />
+    <Folder Include="Features\Orders\UpdateStatus\" />
+    <Folder Include="Features/Orders/UpdateTotal/" />
+    <Folder Include="Features/WeeklyReports/GetWeeklyReports/" />
+    <Folder Include="Infrastructure/BackgroundJobs/" />
+    <Folder Include="Infrastructure/BackgroundJobs/Implementation/" />
+    <Folder Include="Infrastructure/Data/" />
+    <Folder Include="Infrastructure/Data/Configurations/" />
+    <Folder Include="Infrastructure/Email/" />
+    <Folder Include="Infrastructure/Filters/" />
+    <Folder Include="Resources/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\logoConta.png" />
+  </ItemGroup>
+
+</Project>
